@@ -1,0 +1,30 @@
+/* ひとこと家計簿の公開用ページ（docs/phase-8 §7.5・§23）。外部のフォント・スクリプト・解析を使わない */
+:root {
+  color-scheme: light dark;
+  --bg: #FBF8F1;        /* アイボリー */
+  --text: #1F2A24;
+  --muted: #4E5652;
+  --accent: #2D6A4F;    /* 深緑 */
+  --rule: #E3DED2;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #141815; --text: #ECEFEA; --muted: #B5BCB6; --accent: #8FD1B1; --rule: #2C332E; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: -apple-system, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  line-height: 1.8; font-size: 1rem; -webkit-text-size-adjust: 100%;
+}
+main { max-width: 42rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+header { border-bottom: 1px solid var(--rule); margin-bottom: 1.5rem; }
+header p { color: var(--muted); margin-top: 0; }
+h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 .25rem; }
+h2 { font-size: 1.2rem; margin-top: 2rem; border-left: 4px solid var(--accent); padding-left: .6rem; }
+a { color: var(--accent); overflow-wrap: anywhere; }
+.crumb { margin: 0 0 .25rem; font-size: .95rem; }
+ul, ol { padding-left: 1.25rem; }
+li { margin: .2rem 0; }
+.note { color: var(--muted); font-size: .95rem; }
+nav + .note { margin-top: .5rem; }
+nav { margin-top: 2.5rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
